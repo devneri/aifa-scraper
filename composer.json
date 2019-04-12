@@ -1,0 +1,21 @@
+{
+    "name": "devneri/aifa-api",
+    "description": "A class to scrape and extract data from AIFA (Agenzia Italiana del FArmaco) database using its public web service",
+    "keywords": ["aifa", "drugs", "farmaci", "italia"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filippo Neri",
+            "email": "dev@neri.ovh"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devneri\\Aifa\\": "src/"
+        }
+    }
+}
