@@ -1,6 +1,10 @@
 # AIFA Scraper
 A class to scrape and extract data from AIFA (Agenzia Italiana del FArmaco) database using its public web service
 
+## Demo
+
+http://cloud.mediatradespace.net/aifa/
+
 ## Use example
 ```
 <?php
