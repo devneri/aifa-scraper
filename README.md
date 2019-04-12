@@ -8,14 +8,14 @@ A class to scrape and extract data from AIFA (Agenzia Italiana del FArmaco) data
 require 'aifa-scraper/src/Scraper.php';
 
 $config = [
-    // This is the base url
+    // This is the base url (this is the default if omitted)
     'baseurl' => 'https://www.agenziafarmaco.gov.it/services/search/select',
 
-    // Field list to retrieve during query. See below for description of interesting fields
+    // Field list to retrieve during query. See below for description of interesting fields (default to *)
     'fieldlist' => 'sm_field_descrizione_farmaco,sm_field_descrizione_atc,sm_field_descrizione_confezione,sm_field_descrizione_ditta',
 
-    // Max records to retrieve
-    'maxrows' => 1000
+    // Max records to retrieve (default to 100)
+    'maxrows' => 50
 ];
 
 $aifaScraper = new \Devneri\Aifa\Scraper($config);

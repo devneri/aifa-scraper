@@ -31,7 +31,7 @@ class Scraper {
         }
 
         if (!isset($config['maxrows'])) {
-            $config['maxrows'] = 2;
+            $config['maxrows'] = 100;
         }
 
         $this->config = $config;
