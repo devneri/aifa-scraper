@@ -92,6 +92,23 @@ class Scraper {
     }
 
     /**
+    * Search by AIC
+    *
+    * Search AIFA database by AIC code and return array of records found
+    *
+    * @param string $atc    AIC code (use of * wildcard is allowed)
+    * @param string $state  Administrative state of drug - 'A' Authorized / 'R' Revoked / 'S' Suspended / '*' all
+    */
+    public function searchByAic($atc, $state = '*') {
+        $url = $this->buildAifaUrl([
+            'sm_field_aic' => $atc,
+            'sm_field_stato_farmaco' => $state
+        ]);
+
+        return $this->query($url);
+    }
+
+    /**
     * Search by drug name
     *
     * Search AIFA database by drug name and return array of records found
